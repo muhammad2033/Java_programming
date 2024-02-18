@@ -1,0 +1,33 @@
+package exception;
+
+public class TestThrows {
+
+	public static void myMethod(int i) throws ArithmeticException, ArrayIndexOutOfBoundsException
+	{
+	  // Statements that might throw an exception 
+		int d = 50/i;
+		System.out.println(d);
+		int[] a= {1,2,3};
+		System.out.println(a[i]);
+	}
+
+	public static void main(String args[]) { 
+	  try {
+	 
+	    myMethod(1);
+	  }
+	  catch (ArithmeticException e) {
+	    // Exception handling statements
+		  System.out.println(e);
+	  }
+	  
+	  try {
+		  myMethod(2);
+	  }
+	  catch (ArrayIndexOutOfBoundsException e) {
+	    // Exception handling statements
+		  System.out.println(e);
+		  
+	  }
+	}
+}
